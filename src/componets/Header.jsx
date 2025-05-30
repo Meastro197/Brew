@@ -16,7 +16,6 @@ const Navbar = () => {
             duration={500}
             className="flex items-center hover:cursor-pointer"
           >
-            <img src={logo} alt="brew logo" className='w-auto h-[90px]'/>
             <span className="ml-2 text-2xl font-bold text-white tracking-wide drop-shadow-md">Brew</span>
           </Link>
         </div>
@@ -24,7 +23,7 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-8">
           <Link to="Drinks" smooth={true} duration={500} className="text-white hover:text-yellow-300 font-medium capitalize">Drinks</Link>
-          <Link to="Desserts" smooth={true} duration={500} className="text-white hover:text-yellow-300 font-medium capitalize">Season</Link>
+          <Link to="Desserts" smooth={true} duration={500} className="text-white hover:text-yellow-300 font-medium capitalize">Desserts</Link>
         </div>
 
         {/* Mobile menu button */}
@@ -44,7 +43,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-blue-500 px-6 py-4 space-y-4">
           <Link onClick={() => setIsOpen(false)} to="Drinks" smooth={true} duration={500} className="block text-white hover:text-yellow-300 font-medium capitalize">Drinks</Link>
-          <Link onClick={() => setIsOpen(false)} to="Desserts" smooth={true} duration={500} className="block text-white hover:text-yellow-300 font-medium capitalize">Season</Link>
+          <Link onClick={() => setIsOpen(false)} to="Desserts" smooth={true} duration={500} className="block text-white hover:text-yellow-300 font-medium capitalize">Desserts</Link>
         </div>
       )}
     </nav>
