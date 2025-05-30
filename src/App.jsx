@@ -1,41 +1,42 @@
-  import { BrowserRouter, Routes, Route } from 'react-router-dom';
-  import Header from './componets/Header.jsx';
-  import BrewMenu from './componets/BrewMenu.jsx';
-  import BrewDesserts from './componets/BrewDesserts.jsx';
-  function Layout({ children }) {
-    return (
-      <>
-        <Header />
-        {children}
-      </>
-    );
-  }
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Header from './componets/Header.jsx'; // Fixed spelling
+import BrewMenu from './componets/BrewMenu.jsx';
+import BrewDesserts from './componets/BrewDesserts.jsx';
 
-  function App() {
-    return (
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/drinks"
-            element={
-              <Layout>
-                <BrewMenu/>
-              </Layout>
-            }
-          />
-          
-          <Route
-            path="/desserts"
-            element={
-              <Layout>
-                <BrewDesserts/>
-              </Layout>
-            }
-          />
+function Layout({ children }) {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
+}
 
-        </Routes>
-      </BrowserRouter>
-    );
-  }
-
-  export default App;
+function App() {
+return (
+    <BrowserRouter>
+      <Routes>
+        {/* Add this default route */}
+        <Route path="/" element={<Navigate to="/drinks" replace />} />
+        
+        <Route
+          path="/drinks"
+          element={
+            <Layout>
+              <BrewMenu/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/desserts"
+          element={
+            <Layout>
+              <BrewDesserts/>
+            </Layout>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default App;
