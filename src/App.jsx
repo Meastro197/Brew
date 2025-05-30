@@ -16,7 +16,6 @@ function App() {
 return (
     <BrowserRouter>
       <Routes>
-        {/* Add this default route */}
         <Route path="/" element={<Navigate to="/drinks" replace />} />
         
         <Route
