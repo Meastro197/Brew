@@ -1,41 +1,36 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Header from './componets/Header.jsx'; // Fixed spelling
-import BrewMenu from './componets/BrewMenu.jsx';
-import BrewDesserts from './componets/BrewDesserts.jsx';
+import Header from './components/Header.jsx';  // Fixed typo in "components"
+import BrewMenu from './components/BrewMenu.jsx';
+import BrewDesserts from './components/BrewDesserts.jsx';
+import BrewJuice from './components/BrewJuice.jsx';
 
 function Layout({ children }) {
   return (
     <>
       <Header />
-      {children}
+        {children}
+      
     </>
   );
 }
 
 function App() {
-return (
+  return (
     <BrowserRouter>
       <Routes>
+        {/* Redirect root to /drinks */}
         <Route path="/" element={<Navigate to="/drinks" replace />} />
         
-        <Route
-          path="/drinks"
-          element={
-            <Layout>
-              <BrewMenu/>
-            </Layout>
-          }
-        />
-        <Route
-          path="/desserts"
-          element={
-            <Layout>
-              <BrewDesserts/>
-            </Layout>
-          }
-        />
+        {/* All routes use the Layout component */}
+        <Route path="/drinks" element={<Layout><BrewMenu /></Layout>} />
+        <Route path="/desserts" element={<Layout><BrewDesserts /></Layout>} />
+        <Route path="/juices" element={<Layout><BrewJuice /></Layout>} />
+
+        {/* Optional: 404 catch-all route */}
+        <Route path="*" element={<Layout><div>404 - Page Not Found</div></Layout>} />
       </Routes>
     </BrowserRouter>
   );
 }
+
 export default App;

@@ -6,8 +6,8 @@ export const brewMenu = {
     { title: 'Americano', price: '0.78' },
     { title: 'Espresso Macchiato', price: '0.78' },
     { title: 'Turkish Coffee', price: '1.2' },
-    { title: 'V60', price: 'new' },
-    { title: 'Moka Pot', price: 'new' },
+    { title: 'V60', price: '2' },
+    { title: 'Moka Pot', price: '2' },
   ],
   latte: [
     { title: 'Flat White', price: '1.28 / 1.65' },
@@ -27,7 +27,7 @@ export const brewMenu = {
     { title: 'Cookies', price: '2.2 / 2.75 / 3.15' },
     { title: 'Hazelnut', price: '2.2 / 2.75 / 3.15' },
     { title: 'White Mocha', price: '2.2 / 2.75 / 3.15' },
-    { title: 'Combo', price: 'new' },
+    { title: 'Combo', price: '2.2 / 2.75 / 3.15' },
   ],
   frappe: [
     { title: 'Mocha', price: '2.67 / 3.3 / 3.9' },
@@ -54,10 +54,10 @@ export const brewMenu = {
     { title: 'Nutella', price: '2.67 / 3.3 / 3.9' },
     { title: 'Oreo', price: '2.67 / 3.3 / 3.9' },
     { title: 'Strawberry', price: '2.67 / 3.3 / 3.9' },
-    { title: 'Caramel Popcorn', price: 'new' },
+    { title: 'Caramel Popcorn', price: '2.67 / 3.3 / 3.9' },
     { title: 'Kinder Bueno', price: '2.67 / 3.3 / 3.9' },
     { title: 'Snickers', price: '2.67 / 3.3 / 3.9' },
-    { title: 'Brownie', price: 'new' },
+    { title: 'Brownie', price: '2.67 / 3.3 / 3.9' },
   ],
   smoothie: [
     { title: 'Peach Passion', price: '2.2 / 2.75 / 3.15' },
@@ -66,6 +66,6 @@ export const brewMenu = {
     { title: 'Tropical', price: '2.2 / 2.75 / 3.15' },
     { title: 'Berryberries', price: '2.2 / 2.75 / 3.15' },
     { title: 'Minted Lemonade', price: '2.2 / 2.75 / 3.15' },
-    { title: 'Lycheelych', price: 'new' },
+    { title: 'Lycheelych', price: '2.2 / 2.75 / 3.15' },
   ]
 };
